@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">⚡ PowerPulse</div>
+    <div class="nav-links">
+      <a href="#">Live</a>
+      <a href="#">Analytics</a>
+      <a href="#">Reports</a>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <h3>⚠</h3>
+    <ul></ul>
+  </div>
+ 
+  <div class="content">
+    <div class="graph">
+      <div class="c-container">
+        <canvas id="energyChart"></canvas>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="card">Voltage: <span id="voltage">--</span></div>
+      <div class="card">Current: <span id="current">--</span></div>
+      <div class="card">RMS: <span id="rms">--</span></div>
+      <div class="card">Power Factor: <span id="pf">--</span></div>
+      <div class="card">Total Current: <span id="totalCurrent">--</span></div>
+      <div class="card">Total Voltage: <span id="totalVoltage">--</span></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="machine-card" onclick="loadMachine(1)">
+      <h4>Machine 1</h4>
+    </div>
+    <div class="machine-card" onclick="loadMachine(2)">
+      <h4>Machine 2</h4>
+    </div>
+    <div class="machine-card add-machine" onclick="addMachine()">
+      <h4>+ Add</h4>
+    </div>
+  </div>
+
+  <!-- ✅ JS goes here, after canvas is loaded -->
+  <script src="script.js"></script>
+</body>
+</html>

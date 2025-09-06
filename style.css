@@ -1,0 +1,153 @@
+/* dashboard -------------------------------------------*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212; /* deep black */
+  color: #e0e0e0;       /* light grey text */
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 10px 20px;
+  color: #fff;
+}
+.navbar a {
+  margin: 0 10px;
+  color: #aaa;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #00e5ff;
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: 30px;                  /* collapsed width */
+  background: #181818;
+  padding: 20px 5px;            /* small padding when collapsed */
+  height: calc(100vh - 50px);   /* below navbar */
+  float: left;
+  overflow: hidden;             /* hide text when collapsed */
+  transition: width 0.3s ease;  /* smooth animation */
+}
+
+.sidebar:hover {
+  width: 200px;                 /* expanded width */
+  padding: 20px;                /* normal padding */
+}
+.sidebar h3, .sidebar ul, .sidebar a {
+  white-space: nowrap;          /* prevent text wrap */
+}
+
+
+/* Content layout */
+.content {
+  display: flex;
+  margin-left: 30px; /* match collapsed sidebar */
+  transition: margin-left 0.3s ease;
+}
+
+/* Shift when sidebar expands */
+.sidebar:hover ~ .content {
+  margin-left: 200px;
+}
+
+/* Graph section */
+.graph {
+  flex: 1;  /* graph grows to fill space */
+  padding: 20px;
+  border-radius: 8px;
+  background: #1e1e1e;
+  margin: 20px;
+  margin-top: 55px;
+}
+
+/* Info cards */
+.main {
+  width: 250px; /* fixed width for info cards */
+  padding: 20px;
+}
+.card {
+  background: #1e1e1e;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.card:hover{
+  background: #00e5ff;
+  color: #000;
+    transform: scale(1.05);
+
+}
+
+/* Chart container */
+.chart-container {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1e1e1e;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-top: 1px solid #333;
+}
+
+/* Machine box style (like Google Meet tiles) */
+.machine-card {
+  width: 120px;
+  height: 80px;
+  background: #2a2a2a;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.machine-card h4 {
+  color: #e0e0e0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.machine-card:hover {
+  background: #00e5ff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.add-machine {
+  border: 2px dashed #555;
+  background: transparent;
+}
+
+.add-machine:hover {
+  border-color: #00e5ff;
+  background: #1e1e1e;
+  color: #00e5ff;
+}
+
+#energyChart {
+  width: 100%;
+  height: 300px;
+}
+

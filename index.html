@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hackathon Login</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212; /* deep black */
+  color: #e0e0e0; 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background: rgba(54, 49, 44, 0.645);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  width: 300px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6); /* shadow effect */
+}
+
+
+.login-container input {
+  display: block;
+  margin: 15px auto;
+  padding: 12px;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255,255,255,0.9);
+}
+
+
+.login-container button {
+  padding: 12px 20px;
+  width: 100%;
+  border: none;
+  background: #63c778;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button:hover {
+  background: #0097a7;
+  transform: scale(1.05);
+}
+
+
+.login-container button:hover {
+  background: #0097a7;
+}
+
+.login-container select {
+  display: block;
+  margin: 15px;
+  padding: 12px;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#error-msg {
+  color: red;
+  margin-top: 10px;
+}
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Machine Monitering</h1>
+    <select id="role">
+  <option value="operator">Operator</option>
+  <option value="maintenance">Maintenance</option>
+  <option value="admin">Admin</option>
+</select id="sel">
+
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()" id="log">Login</button>
+    <p id="error-msg"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

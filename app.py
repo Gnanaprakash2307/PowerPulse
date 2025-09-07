@@ -4,8 +4,8 @@ import requests
 import pandas as pd
 
 # 🔹 Firebase Realtime Database details
-FIREBASE_DB_URL = "https://ems-2-51158-default-rtdb.asia-southeast1.firebasedatabase.app/"
-FIREBASE_SECRET = "nojICIHnSZXZkMbcMea1jgQF6LFRvmeBReHKtA9c"
+FIREBASE_DB_URL = "https://ems-1-6e6b1-default-rtdb.asia-southeast1.firebasedatabase.app/"
+FIREBASE_SECRET = "93toZheMgXpV8HyseSzPCmPJUM6C0NkSrIsgPvdtT"
 
 # 🔹 Initialize Flask
 app = Flask(__name__)

@@ -6,6 +6,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+  <!-- Top Navbar -->
   <div class="navbar">
     <div class="logo">⚡ PowerPulse</div>
     <div class="nav-links">
@@ -16,11 +17,7 @@
     </div>
   </div>
 
-  <div class="sidebar">
-    <h3>⚠</h3>
-    <ul></ul>
-  </div>
- 
+  <!-- Main Content -->
   <div class="content">
     <div class="graph">
       <div class="c-container">
@@ -31,13 +28,14 @@
     <div class="main">
       <div class="card">Voltage: <span id="voltage">--</span></div>
       <div class="card">Current: <span id="current">--</span></div>
-      <div class="card">RMS: <span id="rms">--</span></div>
-      <div class="card">Power Factor: <span id="pf">--</span></div>
+      <div class="card">Power: <span id="power">--</span></div>
+      <div class="card">Energy: <span id="energy">--</span></div>
       <div class="card">Total Current: <span id="totalCurrent">--</span></div>
       <div class="card">Total Voltage: <span id="totalVoltage">--</span></div>
     </div>
   </div>
 
+  <!-- Footer -->
   <div class="footer">
     <div class="machine-card" onclick="loadMachine(1)">
       <h4>Machine 1</h4>
@@ -50,7 +48,9 @@
     </div>
   </div>
 
-  <!-- ✅ JS goes here, after canvas is loaded -->
-  <script src="script.js"></script>
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
